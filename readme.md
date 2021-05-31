@@ -26,7 +26,8 @@
         android:name="com.daemon.DInstrumentation"
         android:targetPackage="com.daemonLibrary.demo"
         android:targetProcesses="com.daemonLibrary.demo,com.daemonLibrary.demo:service" />
-<application>```
+<application>
+```
 将包名替换成自己的包名
 
 2、在app的Application中添加启动代码，并实现配置接口和回调接口
@@ -35,6 +36,7 @@
         super.attachBaseContext(base)
         //DaemonLog.d("Application onCrearte")
         Daemon.startWork(this, DaemonConfigurationImplement(this), DaemonCallbackImplement())
-}```
+}
+```
 
 
